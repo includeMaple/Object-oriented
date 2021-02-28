@@ -102,7 +102,7 @@ for(let i in name) {console.log(i)} // _weight weight
 #### 立即执行函数
 (function(){})()
 立即执行函数原理是闭包
-```
+```javascript
 let fun = (function() {
   let name = 'ccc'
   return function (param) {
@@ -239,7 +239,6 @@ say(duck) # gaga
 上面只关心行为，不过另一方面来说，类型会决定行为模式，同样的方法使用不同类型的参数会产生多种形态，也就是多态。
 理解多态的方式很多，鸭子类型只是其中一种，我们也可以通过继承来理解，上面class可以多个父类，也有say方法，根据各自特性不同，重写say方法不同，所以同样的调用say方法，实现方式不同
 #### JS
-https://blog.csdn.net/Donspeng/article/details/76079403?utm_source=blogxgwz4
 不使用ducktype
 ```javascript
 function bird(){
@@ -424,6 +423,7 @@ print(ship1.energy)  # 947.12
  
 关联关系的关键是找到某种联系，而这种联系将不同的实体联系在一起：比如朋友关系将朋友联系在一起，很多朋友会相互打电话一起出去玩，夫妻关系把一些男女联系在一起，而不同的联系情况应该有不同的表现，比如如果定义是同事，就不应该有过多超过朋友范围的行为。
 还是用宇宙飞船做例子，假如两艘宇宙飞船是友军。下面将新增一个属性表示友军
+```python
 class Spaceship:
     def __init__(self, name, energy, friend):
         self.name = name
@@ -485,6 +485,7 @@ print(friend.add_fri(ship2, ship3))  # True
 fris = friend.get_fri(ship1)
 for item in fris:
     print(item[0].name, item[1].name)
+ ```
 1.6.3	组合关系(Composition)
 是整体与部分的关系，但部分不能离开整体而单独存在。如公司和部门是整体和部分的关系，没有公司就不存在部门。
 组合关系是关联关系的一种，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期。
