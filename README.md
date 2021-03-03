@@ -100,8 +100,9 @@ for(let i in name) {console.log(i)} // _weight weight
 
 
 #### 立即执行函数
-(function(){})()
-立即执行函数原理是闭包
+(function(){})()：利用函数作用域的特性
+
+立即函数也可用结合闭包一起使用
 ```javascript
 let fun = (function() {
   let name = 'ccc'
@@ -111,7 +112,7 @@ let fun = (function() {
 })()
 fun('dddd') // cccdddd
 ```
-立即执行函数有闭包拥有的所有缺点，且不具有可读性。
+不具有可读性。
 ###	继承与掺元类
 一般来说，在设计类的时候，我们希望：
 1. 减少重复性代码
